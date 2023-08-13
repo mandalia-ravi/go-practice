@@ -3,6 +3,10 @@ package main
 import "fmt"
 
 func main() {
+	// learning the most important line
+	fmt.Println("Hello World!!!")
+
+	// variable declaration
 	var x int = 5
 	y := 10
 	const pi = 3.14
@@ -11,12 +15,11 @@ func main() {
 	fmt.Println("y:", y)
 	fmt.Println("pi:", pi)
 
-	fmt.Println("Hello World!!!")
-
 	var age int = 25
 	fmt.Printf("Age: %d\n", age)
 	fmt.Printf("Pi: %.2f\n", pi)
 
+	// if else
 	if age >= 25 {
 		fmt.Println("You are an adult")
 	} else {
@@ -26,12 +29,20 @@ func main() {
 	result := add(5, 3)
 	fmt.Println("Sum:", result)
 
+	// difference between using var and :=
+	/*
+		Variables declared with var at the package level have a package-level scope.
+		Variables declared with var within a function have a function-level scope.
+		Variables declared with := have a block-level scope, which means they are only accessible within the block where they are declared.
+	*/
+
 	printNumbers()
 	ArrAndSlice()
 	maps()
 	printOddEven(21)
 	print(50)
 	copyMapValues()
+
 	fmt.Println(reverseString("ravi"))
 	fmt.Println(reverseStringUsingSlice("ravi"))
 
@@ -46,10 +57,12 @@ func main() {
 	fmt.Println("Maximum Subarray Sum:", maxSubarraySum(nums))
 }
 
+// add 2 numbers
 func add(a, b int) int {
 	return a + b
 }
 
+// print numbers 1 to 10
 func printNumbers() {
 	for i := 1; i <= 10; i++ {
 		fmt.Print(i, " ")
